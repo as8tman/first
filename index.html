@@ -144,7 +144,7 @@
 
     <script>
 
-// var elem = document.getElementById("container");
+var elem = document.getElementById("container");
 
 /* When the openFullscreen() function is executed, open the video in fullscreen.
 Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
@@ -156,7 +156,7 @@ function openFullscreen() {
   } else if (elem.msRequestFullscreen) { /* IE11 */
     elem.msRequestFullscreen();
   }
-  alert('function start2');
+  alert('function start3');
 }
 
 document.querySelector('#full').addEventListener('click', function(){
