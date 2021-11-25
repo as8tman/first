@@ -134,6 +134,7 @@
             <button id="lock-landscape-button">가로모드로 고정하기</button>
 
             <button id="unlock-button">해제하기</button>
+            <button id="full">full</button>
 
         </div>
 
@@ -143,7 +144,7 @@
 
     <script>
 
-var elem = document.getElementById("container");
+// var elem = document.getElementById("container");
 
 /* When the openFullscreen() function is executed, open the video in fullscreen.
 Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
@@ -155,17 +156,21 @@ function openFullscreen() {
   } else if (elem.msRequestFullscreen) { /* IE11 */
     elem.msRequestFullscreen();
   }
-  alert('function start');
+  alert('function start2');
 }
 
-        window.addEventListener('load', function(){
-            // document.body.requestFullscreen();
-            // document.documentElement.requestFullscreen();
-            // window.scrollTo(0,1);
-            // document.querySelector("#container").requestFullscreen();
-            openFullscreen();
-            alert('6');
-        })
+document.querySelector('#full').addEventListener('click', function(){
+    openFullscreen();
+})
+
+        // window.addEventListener('load', function(){
+        //     // document.body.requestFullscreen();
+        //     // document.documentElement.requestFullscreen();
+        //     // window.scrollTo(0,1);
+        //     // document.querySelector("#container").requestFullscreen();
+        //     openFullscreen();
+        //     alert('6');
+        // })
         // window.onload = function(){
         // }
 
