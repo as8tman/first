@@ -140,10 +140,13 @@
 
 
     <script>
-        window.onload = function(){
+        window.addEventListener('load', function(){
+            
             document.querySelector("#container").requestFullscreen();
             alert('aaaaaaa');
-        }
+        })
+        // window.onload = function(){
+        // }
 
 
         var _LOCK_BUTTON = document.querySelector("#lock-landscape-button"),
