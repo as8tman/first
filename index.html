@@ -142,12 +142,29 @@
 
 
     <script>
+
+var elem = document.getElementById("container");
+
+/* When the openFullscreen() function is executed, open the video in fullscreen.
+Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+  alert('function start');
+}
+
         window.addEventListener('load', function(){
-            document.body.requestFullscreen();
-            document.documentElement.requestFullscreen();
-            window.scrollTo(0,1);
+            // document.body.requestFullscreen();
+            // document.documentElement.requestFullscreen();
+            // window.scrollTo(0,1);
             // document.querySelector("#container").requestFullscreen();
-            alert('4');
+            openFullscreen();
+            alert('6');
         })
         // window.onload = function(){
         // }
