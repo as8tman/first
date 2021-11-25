@@ -140,7 +140,10 @@
 
 
     <script>
-document.querySelector("#container").requestFullscreen();
+        window.onload = function(){
+            document.querySelector("#container").requestFullscreen();
+
+        }
 
 
         var _LOCK_BUTTON = document.querySelector("#lock-landscape-button"),
